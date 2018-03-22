@@ -1,3 +1,4 @@
+using FizzBuzzKata;
 using Xunit;
 
 namespace FizzBuzzTests
@@ -11,6 +12,24 @@ namespace FizzBuzzTests
             var results = fizzBuzz.Run(1);
             
             Assert.Equal("1", results);
+        }
+
+        [Fact]
+        public void ShouldReturn2For2Iterations()
+        {
+            var fizzBuzz = new FizzBuzz();
+            var result = fizzBuzz.Run(2);
+            
+            Assert.Equal("1\n2", result);
+        }
+        
+        [Fact]
+        public void ShouldReturnFizzFor3Iterations()
+        {
+            var fizzBuzz = new FizzBuzz();
+            var result = fizzBuzz.Run(3);
+            
+            Assert.Equal("1\n2\nFizz", result);
         }
     }
 }
