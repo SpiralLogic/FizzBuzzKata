@@ -1,22 +1,24 @@
-﻿﻿namespace FizzBuzzKata
+﻿
+namespace FizzBuzzKata
 {
     public class FizzBuzz
     {
         public string Run(int iterations)
         {
-            var output = string.Empty;
+            var elements = new string[iterations];
+
             for (var i = 1; i <= iterations; i++)
             {
                 if (i % 3 == 0)
                 {
-                    output += "Fizz\n";
+                    elements[i - 1] = "Fizz";
                     continue;
                 }
 
-                output += i + "\n";
+                elements[i - 1] = i.ToString();
             }
 
-            return output.TrimEnd('\n');
+            return string.Join('\n', elements);
         }
     }
 }
