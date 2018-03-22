@@ -31,5 +31,14 @@ namespace FizzBuzzTests
             
             Assert.Equal("1\n2\nFizz", result);
         }
+        
+        [Fact]
+        public void ShouldReturnBuzzFor5Iterations()
+        {
+            var fizzBuzz = new FizzBuzz();
+            var result = fizzBuzz.Run(5);
+            
+            Assert.Equal("1\n2\nFizz\n4\nBuzz", result);
+        }
     }
 }
