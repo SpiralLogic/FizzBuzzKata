@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace FizzBuzzKata
 {
@@ -19,16 +20,19 @@ namespace FizzBuzzKata
             {
                 if (i % 3 == 0)
                 {
-                    elements[i - 1] = "Fizz";
+                    elements[i - 1] += "Fizz";
                 }
-                else if (i % 5 == 0)
+
+                if (i % 5 == 0)
                 {
-                    elements[i - 1] = "Buzz";
+                    elements[i - 1] += "Buzz";
                 }
-                else
+
+                if (elements[i - 1] == string.Empty)
                 {
                     elements[i - 1] = i.ToString();
                 }
+
             }
         }
     }
